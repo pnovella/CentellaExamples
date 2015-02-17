@@ -1,0 +1,6 @@
+      PyCppSharing
+==========================
+
+Shows how to run both python and c++ algorithms (GATE) in the same job.
+C++ (MyTest) and Python (PyAlgo) algorithm examples just take histograms 
+and variables from each other. MyTest needs to be compiled.  
