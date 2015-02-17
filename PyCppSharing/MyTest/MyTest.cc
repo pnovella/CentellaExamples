@@ -8,7 +8,6 @@ MyTest::MyTest(gate::VLEVEL vl, std::string label) :
 IAlgo(vl,"MyTest",0,label){
 //==========================================================================
 
-
 }
 
 //==========================================================================
@@ -16,7 +15,6 @@ MyTest::MyTest(const gate::ParamStore& gs,
 			   gate::VLEVEL vl, std::string label) :
   IAlgo(gs,vl,"MyTest",0,label){
 //==========================================================================
-
 
 }
 
@@ -30,7 +28,8 @@ bool MyTest::initialize(){
     ->hman()->h1("MyC++Histo","MyC++Histo",10,0,100);
 
   this->store("MyC++Var","ou");
-    
+  
+ 
   return true;
 
 }

@@ -1,0 +1,38 @@
+
+#--------- PATHS with modules to be used -------#
+CNTJob PATHS SV 1
+./
+
+#---------------  C++ libraries ----------------#
+CNTJob LIBS SV 1
+./MyTest/lib/libMyTest.so
+
+#--------- DATA -------#
+CNTJob INPUT_DATA SV 1
+//home/pnovella/Physics/NEXT/DATA/myOutputDST.root
+
+#--------- DATA READER -------#
+CNTJob READER S gateReader
+
+#------ SAVE EVENTS IN OUTPUT FILE ----------# 
+CNTJob SAVE I 0
+
+#---------- NUMBER OF EVENTS TO ANALYZE ----------#
+CNTJob NEVENTS I 1
+
+#--------- ALGORITHMS -------#
+CNTJob ALGOS SV 2
+C++Algo
+PyAlgo
+
+#--------- C++Algo PARAMS -------#
+C++Algo TYPE S MyTest
+C++Algo LAN S c++
+C++Algo VLEVEL I 2
+
+#------------- log file -------------#
+CNTJob FLOG I 1
+CNTJob FLOG S PyCppSharing.log
+
+#---------- histogram file ----------#
+CNTJob FHISTOS S PyCppSharing.root

@@ -11,12 +11,12 @@ class MyTest : public gate::IAlgo {
   
   //! default contructor
   MyTest(gate::VLEVEL=gate::NORMAL,
-	       std::string label="MyTestInstance");
+	 std::string label="MyTestInstance");
   
   //! constructor with store with input parameters 
   MyTest(const gate::ParamStore& gs,
-	       gate::VLEVEL=gate::NORMAL,
-	       std::string label="MyTestInstance");
+	 gate::VLEVEL=gate::NORMAL,
+	 std::string label="MyTestInstance");
   
   //! destructor
   virtual ~MyTest(){};

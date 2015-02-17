@@ -3,16 +3,16 @@
 
 #---- Centella Parameters for group CNTJob ----#
 
-CNTJob FDOC S centella_doc.tex
-CNTJob FHISTOS S PyCppSharing.log
-CNTJob HISTOS S True
+CNTJob FDOC S CNT_doc.tex
+CNTJob FHISTOS S PyCppSharing.root
+CNTJob HISTOS S 1
 CNTJob INPUT_DATA SV 1
-/home/pnovella/Physics/NEXT/DATA/myOutputDST.root
+///home/pnovella/Physics/NEXT/DATA/myOutputDST.root
 CNTJob ALGOS SV 2
 C++Algo
 PyAlgo
 CNTJob OUTPUT_DATA SV 1
-/home/pnovella/Physics/NEXT/DATA/myOutputDST_out.root
+///home/pnovella/Physics/NEXT/DATA/myOutputDST_out.root
 
 #---- Centella Parameters for group PyAlgo ----#
 
@@ -24,8 +24,8 @@ PyAlgo MyPythonVar S ei
 
 RUN OUTPUT_EVENTS I 0
 RUN INPUT_EVENTS I 1
-RUN CURRENT_DATA S /home/pnovella/Physics/NEXT/DATA/myOutputDST.root
-RUN TIME S Tue_Feb_17_16:17:33_2015
+RUN CURRENT_DATA S ///home/pnovella/Physics/NEXT/DATA/myOutputDST.root
+RUN TIME S Tue_Feb_17_20:06:51_2015
 
 #---- Centella Parameters for group USER ----#
 
@@ -33,6 +33,8 @@ USER MyPythonVar2 S ei
 
 #---- Centella Parameters for group C++Algo ----#
 
-C++Algo VERSION I 0
+C++Algo VERSION I 88
+C++Algo VLEVEL I 2
+C++Algo LAN S c++
 C++Algo TYPE S MyTest
 C++Algo MyC++Var S ou

@@ -12,8 +12,9 @@ class PyAlgo(AAlgo):
         self.name='PyAlgo'
         
         AAlgo.__init__(self,param,level,self.name,0,label,kargs)
-
-    
+        
+        
+        
     def initialize(self):
 
         """        
