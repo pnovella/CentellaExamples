@@ -18,7 +18,10 @@ algos,idsts = [],[]
 
 idsts.append("/home/pnovella/Physics/NEXT/DATA/myOutputDST.root")
 
-algos.append(MyTest(gate.NORMAL,'C++Algo'))
+st = gate.ParamStore()
+
+algos.append(MyTest(st,gate.NORMAL,'C++Algo'))
+
 algos.append(PyAlgo(False,1,'PyAlgo'))
 
 c= centella.centella(algos,idsts,level=1,max_evt=1,
