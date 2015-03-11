@@ -1,0 +1,29 @@
+
+
+#--------- PATHS with modules to be used -------#
+CNTJob PATHS SV 1
+/home/pnovella/Physics/NEXT/sw/CentellaExamples/ireneIO
+
+#--------- DATA -------#
+CNTJob INPUT_DATA SV 1
+//home/pnovella/Physics/NEXT/DATA/Next100.Bi214.ICS.0.next
+
+CNTJob OUTPUT_DATA SV 1
+//home/pnovella/Physics/NEXT/test/myOutTree.root
+
+#------ SAVE EVENTS IN OUTPUT FILE ----------# 
+CNTJob SAVE I 0
+
+#---------- NUMBER OF EVENTS TO ANALYZE ----------#
+CNTJob NEVENTS I 10
+
+#--------- ALGORITHMS-------#
+CNTJob ALGOS SV 1
+exirene
+
+#------------- log file -------------#
+CNTJob FLOG I 1
+CNTJob FLOG S exirene.log
+
+#---------- histogram file ----------#
+CNTJob FHISTOS S exirene.root
