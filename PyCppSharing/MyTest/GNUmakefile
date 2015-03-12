@@ -7,14 +7,14 @@ DICT  = MyTestCint
 SHLIB = libMyTest.so
 SOURCES = $(wildcard *.cc)
 #HEADERS = $(wildcard *.h)
-HEADERS = $(filter-out GATEModuleCint.h,$(wildcard *.h))
+HEADERS = $(filter-out MyTestCint.h,$(wildcard *.h))
 #OBJECTS = $(SOURCES:.cc=.o)
 OBJECTS = $(filter-out RunMyTest.o, $(SOURCES:.cc=.o))
 
 
 # include options for this package
 INCFLAGS = -I.
-INCFLAGS += -I$(GATE_DIR)/include
+INCFLAGS += -I$(GATE_DIR)
 
 # platform-specific options
 OSNAME          = $(shell uname -s)
@@ -36,7 +36,7 @@ include $(GATEMAKEDIR)/GNUmakefile.GATE
 ### binary compilation ###
 
 LIBS += $(shell root-config --libs)  -lCore -lRIO -lHist
-LIBS += -L../../lib  -lGATE -lGATEIO -lGATEUtils -lGateModule
+LIBS += -L$(GATE_DIR)/lib  -lGATE -lGATEIO -lGATEUtils -lGateModule
 
 bin: lib/$(SHLIB) RunMyTest.o
 	@echo "<< compiling RunMyTest >>"

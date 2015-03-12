@@ -1,9 +1,7 @@
 #ifndef _MyTest__
 #define _MyTest__
 
-#include <TSystem.h>
-
-#include <Centella.h>
+#include <GATE/Centella.h>
 
 class MyTest : public gate::IAlgo {
 
